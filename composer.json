@@ -1,0 +1,25 @@
+{
+    "name": "jcs/role-permission",
+    "description": "Dynamic RBAC package for Laravel",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "JCS\\RolePermission\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JCS\\RolePermission\\Providers\\RolePermissionServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^9.0|^10.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    }
+}
