@@ -24,10 +24,11 @@ class CreateSuperAdminCommand extends Command
 
         $superAdminRole = Role::firstOrCreate(['name' => config('rolepermission.super_admin_role')]);
 
-        $user = $userModel::create([
-            $userNameColumn => $name,
+        $user = $userModel::firstOrCreate([
             $userEmailColumn => $email,
+        ],[
             $userPasswordColumn => Hash::make($password),
+            $userNameColumn => $name,
         ]);
 
         $user->roles()->attach($superAdminRole->id);
