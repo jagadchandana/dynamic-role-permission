@@ -8,4 +8,5 @@ return [
     'user_name_column' => 'name',
     'user_email_column' => 'email',
     'user_password_column' => 'password',
+    'super_admin_role' => "super-admin"
 ];
